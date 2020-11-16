@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>
+        Project - 78
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="icons8-laptop-coding-64.png" />
+    <meta name="viewport" content="minimum-scale=1,initial-scale=1,width=device-width,shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <p id="head">MY FAMILY BOOK</p>
+    <img id="img" style="height: 400px;" src="images.jpeg">
+    <h4 id="Name">Family Book</h4>
+    <button onclick="Next()" id="next">Next</button>
+</body>
+<style>
+    #next {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        border-style: solid;
+        border-color: black;
+    }
+
+    #name {
+        font-size: 30px;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    #head {
+        font-size: 60px;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    body {
+        text-align: center;
+    }
+</style>
+<script>
+    var Name = [
+        "Chandan Sharma",
+        "Meenakshi Sharma",
+        "Arnav Sharma",
+        "Aariv Sharma"
+    ];
+    var Images = [
+        "https://res.cloudinary.com/dzng5yu05/image/upload/v1605537600/Papa_erxrbc.jpg",
+        "https://res.cloudinary.com/dzng5yu05/image/upload/v1605537599/Mamma_ulqgtg.jpg",
+        "https://res.cloudinary.com/dzng5yu05/image/upload/v1605537599/Avi_chk3qg.jpg",
+        "https://res.cloudinary.com/dzng5yu05/image/upload/v1605537598/Aaru_ziqbwx.jpg"
+    ];
+    var i = 0;
+
+    function Next() {
+        document.getElementById("Name").innerHTML = Name[i];
+        document.getElementById("img").src = Images[i];
+        i++;
+        if (i == 5) {
+            i = 0;
+            document.getElementById("Name").innerHTML = "Chandan Sharma";
+            document.getElementById("img").src =
+                "https://res.cloudinary.com/dzng5yu05/image/upload/v1605537600/Papa_erxrbc.jpg";
+        }
+    }
+</script>
+
+</html>
